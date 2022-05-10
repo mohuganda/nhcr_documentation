@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="IntraHealth">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Use Cases - NHCR (Uganda) Documentation</title>
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Use Cases";
+    var mkdocs_page_input_path = "user/usecases.md";
+    var mkdocs_page_url = "/planetsystems/OpenCR/user/usecases/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> NHCR (Uganda) Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Home</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../..">Welcome!</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../introduction/">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../process/">Matching Process</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../recordlinkage/">Record Linkage Process</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Use Cases</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#use-cases">Use Cases</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#viral-load-test-request-paper">Viral Load Test Request (Paper)</a></li>
+        
+            <li><a class="toctree-l4" href="#viral-load-test-request-emr">Viral Load Test Request (EMR)</a></li>
+        
+            <li><a class="toctree-l4" href="#case-based-surveillance">Case-Based Surveillance</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../ui/">UI -- Basics</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../ui-advanced/">UI -- Human Adjudication</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../openmrs/">OpenMRS MPI Client</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../cruid/">Unique Identifiers</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../algos/">Intro to Algorithms</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../supported/">Supported Algorithms</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Implementer</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../guide/">OpenHIE Implementation Guide</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../impl/roles/">Roles and Responsibilities</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../resources/">Additional Resources</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Developer</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../dev/addalgos/">Add Algorithms</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dev/docs/">Building Documentation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dev/license/">License</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dev/contributing/">Contributing</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Sysadmin</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <span class="caption-text">Introduction</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/architecture/">Architecture</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/proficiencies/">Proficiencies</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/internals/">Internals</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Getting Started (Docker)</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/docker/">Local Installation using Docker</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/queries/">Example API Query (cURL)</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../notebooks/basic_query_in_python.ipynb">None</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/decision_rules/">Decision Rules</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Installation</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/requirements/">System Requirements</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/method/">Choosing a Method</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/configuration/">Configuration</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/installation/">Local Installation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/installation_full/">Server Installation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/ansible/">Ansible</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Load Bulk Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/loadjs/">Load Demo Data (JavaScript)</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../notebooks/load_bulk_data_in_python.ipynb">None</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Production Considerations</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/security/">Security</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/backup/">Backup and Recovery</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/troubleshooting/">Troubleshooting</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">NHCR (Uganda) Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>User &raquo;</li>
+        
+      
+    
+    <li>Use Cases</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/planetsystems/OpenCR/edit/master/docs/user/usecases.md"> Edit on ministryofhealth/nhcr</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="use-cases">Use Cases</h1>
+<p>At its core, NHCR provides a unique identifier (UID) that also links to all other already matched records from submitting systems. This means that NHCR stores an identifier from submitting systems so that it can uniquely identify according to however the submitting systems store their records, but it also produces a UID for the entire domain using the service.</p>
+<p>Several workflows are supported out-of-the-box depending on the POS-NHCR use case. For example:</p>
+<ul>
+<li>
+<p>A specimen is received by a laboratory. Demographic data and requesting location data is entered into the LMIS. The LMIS queries NHCR for a UID. NHCR provides the UID if one did not exist and stores limited patient demographic information but <strong>does not</strong> store test results. A use that this enables (but NHCR <strong>does not</strong> provide) is the ability to track persons lab results over time.</p>
+</li>
+<li>
+<p>A patient is registered at a clinic. The clinician recommends a viral load test. The specimen is sent for processing to the laboratory. NHCR receives the UID and specimen and returns a diagnostic result that is then stored in the EMR. </p>
+</li>
+<li>
+<p>A patient is registered at a clinic and has been assigned a UID. In the course of their clinical encounter, a sentinel event occurs, triggering the EMR to send limited clinical information to the Health Information Exchange (HIE). The HIE sends the data to a data analysis warehouse for population analysis and case-based surveillance.</p>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It is important to note that in the above workflows NHCR does not store or provide clinical data. Such processes are external to NHCR and must be separately NHCReated, governed, and enabled. </p>
+</div>
+<h3 id="viral-load-test-request-paper">Viral Load Test Request (Paper)</h3>
+<p><img alt="Link to HIV Load Test Requested by Paper" src="../../images/vl.png" /></p>
+<p>A plasma specimen is received by a laboratory for HIV viral load testing. Demographic data and requesting location data is entered into the LMIS. The LMIS queries NHCR for a UID. NHCR provides the UID if one did not exist and stores limited patient demographic information but <strong>does not</strong> store test results. A use that this enables (but NHCR <strong>does not</strong> provide) is the ability to track persons lab results over time.</p>
+<h3 id="viral-load-test-request-emr">Viral Load Test Request (EMR)</h3>
+<p><img alt="Link to HIV Load Test Requested by EMR" src="../../images/emrvl.png" /></p>
+<p>A patient is registered at a clinic. The clinician recommends an HIV viral load test. The plasma specimen is sent for processing to the laboratory. NHCR receives the UID and specimen and returns a diagnostic result that is then stored in the EMR. </p>
+<h3 id="case-based-surveillance">Case-Based Surveillance</h3>
+<p><img alt="Link to HIV Load Test Requested by EMR" src="../../images/cbs.png" /></p>
+<p>A patient is registered at a clinic and has been assigned a UID. In the course of their clinical encounter, a sentinel event occurs, triggering the EMR to send limited clinical information to the Health Information Exchange (HIE). The HIE sends the data to a data analysis warehouse for population analysis and case-based surveillance.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../ui/" class="btn btn-neutral float-right" title="UI -- Basics">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../recordlinkage/" class="btn btn-neutral" title="Record Linkage Process"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2022 MoH</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../recordlinkage/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../ui/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

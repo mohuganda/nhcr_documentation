@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="IntraHealth">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Local Installation using Docker - NHCR (Uganda) Documentation</title>
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Local Installation using Docker";
+    var mkdocs_page_input_path = "admin/docker.md";
+    var mkdocs_page_url = "/planetsystems/OpenCR/admin/docker/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> NHCR (Uganda) Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Home</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../..">Welcome!</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../user/introduction/">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/process/">Matching Process</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/recordlinkage/">Record Linkage Process</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/usecases/">Use Cases</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/ui/">UI -- Basics</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/ui-advanced/">UI -- Human Adjudication</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/openmrs/">OpenMRS MPI Client</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/cruid/">Unique Identifiers</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/algos/">Intro to Algorithms</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/supported/">Supported Algorithms</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Implementer</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../user/guide/">OpenHIE Implementation Guide</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../impl/roles/">Roles and Responsibilities</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/resources/">Additional Resources</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Developer</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../dev/addalgos/">Add Algorithms</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dev/docs/">Building Documentation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dev/license/">License</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dev/contributing/">Contributing</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Sysadmin</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <span class="caption-text">Introduction</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../architecture/">Architecture</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../proficiencies/">Proficiencies</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../internals/">Internals</a>
+                </li>
+    </ul>
+                </li>
+                <li class=" current">
+                    
+    <span class="caption-text">Getting Started (Docker)</span>
+    <ul class="subnav">
+                <li class="toctree-l3 current">
+                    
+    <a class="current" href="./">Local Installation using Docker</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#local-installation-using-docker">Local Installation using Docker</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#prerequisites">Prerequisites</a></li>
+        
+            <li><a class="toctree-l5" href="#instructions">Instructions</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../queries/">Example API Query (cURL)</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../notebooks/basic_query_in_python.ipynb">None</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../decision_rules/">Decision Rules</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Installation</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../requirements/">System Requirements</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../method/">Choosing a Method</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../configuration/">Configuration</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../installation/">Local Installation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../installation_full/">Server Installation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../ansible/">Ansible</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Load Bulk Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../loadjs/">Load Demo Data (JavaScript)</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../notebooks/load_bulk_data_in_python.ipynb">None</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Production Considerations</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../security/">Security</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../backup/">Backup and Recovery</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../troubleshooting/">Troubleshooting</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">NHCR (Uganda) Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Getting Started (Docker) &raquo;</li>
+        
+      
+        
+          <li>Sysadmin &raquo;</li>
+        
+      
+    
+    <li>Local Installation using Docker</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/planetsystems/OpenCR/edit/master/docs/admin/docker.md"> Edit on ministryofhealth/nhcr</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="local-installation-using-docker">Local Installation using Docker</h1>
+<div class="admonition note">
+<p class="admonition-title">Time to complete</p>
+<p>10 Minutes</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This guide is for demonstrations or tests only, not for servers or production environments.</p>
+</div>
+<p>The easiest way to get started with NHCR is to use Docker to launch ElasticSearch and HAPI FHIR Server and run the NHCR Service directly. By running the NHCR Service directly, it is easy to revise and reload decision rules.</p>
+<p>These instructions have been tested on Linux and macOS.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This installation method requires some familiarity with the command line.</p>
+</div>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Any modern PC capable of running Docker for Desktop.</li>
+<li>macOS: 2010 and newer Macs. macOS 10.13 or later (Sierra, Mojava, Catalina).</li>
+<li>Windows 10 64-bit (Education, Pro, or Enterprise). Note that you must have Hyper-V and Containers Windows enabled and these require administrator privileges.</li>
+<li>8GB RAM on the computer is recommended. ElasticSearch and HAPI FHIR Server will use up to 1GB of RAM. NHCR Service will use less than 200MB RAM.</li>
+<li>Docker for Desktop</li>
+<li><a href="https://nodejs.org/en/download/package-manager">Node 10</a> which includes npm.</li>
+<li><a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">git</a></li>
+</ul>
+<h2 id="instructions">Instructions</h2>
+<ul>
+<li>Clone the repository and change directory into the root folder.</li>
+</ul>
+<div class="codehilite"><pre><span></span>https://github.com/planetsystems/OpenCR.git
+<span class="nb">cd</span> client-registry
+</pre></div>
+
+
+<ul>
+<li>Ensure that Docker is installed and running.</li>
+</ul>
+<div class="codehilite"><pre><span></span>docker --version
+</pre></div>
+
+
+<h3 id="docker-hapi-fhir-and-es-with-node-nhcr">Docker HAPI-FHIR and ES with node NHCR</h3>
+<p>Start ElasticSearch and HAPI FHIR Server using Docker.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You cannot use the existing hosted ElasticSearch image because NHCR requires two plugins to be installed. The docker-compose file provided uses the Dockerfile-es which builds an ES image with the plugins.</p>
+</div>
+<div class="codehilite"><pre><span></span>docker-compose up fhir es
+</pre></div>
+
+
+<ul>
+<li>Then install the requirements for the NHCR Service.</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> server
+npm install
+</pre></div>
+
+
+<ul>
+<li>Copy a configuration for Docker for the NHCR Service to use.</li>
+</ul>
+<div class="codehilite"><pre><span></span>cp config/config_docker_template.json config/config_docker.json
+</pre></div>
+
+
+<ul>
+<li>Run the server using the docker config for NODE_ENV.</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="c1"># from client-registry/server</span>
+sudo <span class="nv">NODE_ENV</span><span class="o">=</span>docker node lib/app.js
+</pre></div>
+
+
+<blockquote>
+<p><code>sudo</code> is needed as NHCR requires access to /var/log for logging. This requirement may be changed in the future.</p>
+</blockquote>
+<ul>
+<li>Visit the UI at: <a href="https://localhost:3000/crux">https://localhost:3000/crux</a></li>
+<li><strong>Default username</strong>: root@intrahealth.org</li>
+<li><strong>Default password</strong>: intrahealth</li>
+</ul>
+<h3 id="docker-compose-fhir-es-and-nhcr">Docker-Compose FHIR, ES, and NHCR</h3>
+<div class="codehilite"><pre><span></span>docker-compose -f docker-compose.cicd.yml up -d
+</pre></div>
+
+
+<blockquote>
+<p>The flag <code>-d</code> runs the processes in the background.</p>
+</blockquote>
+<ul>
+<li>Visit the UI at: <a href="https://localhost:3000/crux">https://localhost:3000/crux</a></li>
+<li><strong>Default username</strong>: root@intrahealth.org</li>
+<li><strong>Default password</strong>: intrahealth</li>
+</ul>
+<h4>Change the NHCR Config</h4>
+<p>If you want to add dockerised NHCR to a system with different docker dependency names, you can add new config files with the following script changes.</p>
+<p>In this scenario, we are going to change the HAPI-FHIR container name to <code>test-fhir</code>.</p>
+<p>To start, open the <code>/server/config/config_cicd_template.json</code> file in a text editor and in the <code>"fhirServer":</code> config section make the following change:</p>
+<div class="codehilite"><pre><span></span><span class="err">...</span>
+<span class="s2">&quot;fhirServer&quot;</span><span class="err">:</span> <span class="p">{</span>
+  <span class="nt">&quot;baseURL&quot;</span><span class="p">:</span> <span class="s2">&quot;http://test-fhir:8080/fhir&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;hapi&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;hapi&quot;</span>
+<span class="p">}</span><span class="err">,</span>
+<span class="err">...</span>
+</pre></div>
+
+
+<p>With that config in place we need to volume in this new config file into our <code>docker-compose.cicd.yml</code> file. Open this file in a text editor. We need three changes, first change the <strong>depends_on</strong> value from <em>fhir</em> to <code>test-fhir</code>. Then, add a new environment variable <code>HAPI_FHIR_URL</code> with the value <a href="http://test-fhir:8080/fhir/metadata">http://test-fhir:8080/fhir/metadata</a>. This url will be used to check the HAPI FHIR instance is running. Finally, add the volumes config to NHCR. Your <code>NHCR</code> config section should resemble this:</p>
+<div class="codehilite"><pre><span></span>  NHCR:
+    container_name: NHCR
+    image: intrahealth/NHCR
+    ports:
+      - &quot;3000:3000&quot;
+    depends_on:
+      - test-fhir
+      - es
+    restart: always
+    environment:
+      - NODE_ENV=cicd
+      - HAPI_FHIR_URL=http://test-fhir:8080/fhir/metadata
+    volumes:
+      - ./server/config/config_cicd_template.json:/src/server/config/config_cicd.json
+</pre></div>
+
+
+<p>Now we can start the system with the following:</p>
+<div class="codehilite"><pre><span></span>docker-compose -f docker-compose.cicd.yml up -d
+</pre></div>
+
+
+<blockquote>
+<p>The flag <code>-d</code> runs the processes in the background.</p>
+</blockquote>
+<ul>
+<li>Visit the UI at: <a href="https://localhost:3000/crux">https://localhost:3000/crux</a></li>
+<li><strong>Default username</strong>: root@intrahealth.org</li>
+<li><strong>Default password</strong>: intrahealth</li>
+</ul>
+<h3 id="view-status-details-of-containers">View status details of containers</h3>
+<p>To see the container statuses run the following command:</p>
+<div class="codehilite"><pre><span></span>docker ps -a
+</pre></div>
+
+
+<blockquote>
+<p>The flag <code>-a</code> will include containers that are not running (i.e. from errors or a manual container stop)</p>
+</blockquote>
+<h3 id="view-system-logs">View system logs</h3>
+<p>To see the logs of a component run the following command:</p>
+<div class="codehilite"><pre><span></span>docker logs -f &lt;component&gt;
+</pre></div>
+
+
+<blockquote>
+<p>Components are: <code>NHCR</code>, <code>es</code>, and <code>fhir</code></p>
+</blockquote>
+<h4>Spin down test instance</h4>
+<p>To remove NHCR and its dependencies, run the following:</p>
+<div class="codehilite"><pre><span></span>docker-compose -f docker-compose.cicd.yml down
+</pre></div>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../queries/" class="btn btn-neutral float-right" title="Example API Query (cURL)">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../internals/" class="btn btn-neutral" title="Internals"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2022 MoH</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../internals/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../queries/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

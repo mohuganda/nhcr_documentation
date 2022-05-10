@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="IntraHealth">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Security - NHCR (Uganda) Documentation</title>
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Security";
+    var mkdocs_page_input_path = "admin/security.md";
+    var mkdocs_page_url = "/planetsystems/OpenCR/admin/security/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> NHCR (Uganda) Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Home</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../..">Welcome!</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../user/introduction/">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/process/">Matching Process</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/recordlinkage/">Record Linkage Process</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/usecases/">Use Cases</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/ui/">UI -- Basics</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/ui-advanced/">UI -- Human Adjudication</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/openmrs/">OpenMRS MPI Client</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/cruid/">Unique Identifiers</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/algos/">Intro to Algorithms</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/supported/">Supported Algorithms</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Implementer</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../user/guide/">OpenHIE Implementation Guide</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../impl/roles/">Roles and Responsibilities</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/resources/">Additional Resources</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Developer</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../dev/addalgos/">Add Algorithms</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dev/docs/">Building Documentation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dev/license/">License</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dev/contributing/">Contributing</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Sysadmin</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <span class="caption-text">Introduction</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../architecture/">Architecture</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../proficiencies/">Proficiencies</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../internals/">Internals</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Getting Started (Docker)</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../docker/">Local Installation using Docker</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../queries/">Example API Query (cURL)</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../notebooks/basic_query_in_python.ipynb">None</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../decision_rules/">Decision Rules</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Installation</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../requirements/">System Requirements</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../method/">Choosing a Method</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../configuration/">Configuration</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../installation/">Local Installation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../installation_full/">Server Installation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../ansible/">Ansible</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Load Bulk Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../loadjs/">Load Demo Data (JavaScript)</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../notebooks/load_bulk_data_in_python.ipynb">None</a>
+                </li>
+    </ul>
+                </li>
+                <li class=" current">
+                    
+    <span class="caption-text">Production Considerations</span>
+    <ul class="subnav">
+                <li class="toctree-l3 current">
+                    
+    <a class="current" href="./">Security</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#security">Security</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#hardening">Hardening</a></li>
+        
+            <li><a class="toctree-l5" href="#authentication-authorization-and-auditing">Authentication, Authorization, and Auditing</a></li>
+        
+            <li><a class="toctree-l5" href="#atna-logging">ATNA Logging</a></li>
+        
+            <li><a class="toctree-l5" href="#non-production">Non-Production</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../backup/">Backup and Recovery</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../troubleshooting/">Troubleshooting</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">NHCR (Uganda) Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Production Considerations &raquo;</li>
+        
+      
+        
+          <li>Sysadmin &raquo;</li>
+        
+      
+    
+    <li>Security</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/planetsystems/OpenCR/edit/master/docs/admin/security.md"> Edit on ministryofhealth/nhcr</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="security">Security</h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It is difficult (and irresponsible) to try to explain all of the best practices in computer security. This page focuses on how security is addressed in the Open Client Registry. The information may be incomplete. Where there is more clarity or information needed, please provide feedback in an <a href="https://github.com/intrahealth/client-registry/issues/new">issue on GitHub</a> so that it can be added.</p>
+</div>
+<p>This page addresses several security areas, including hardening, user authentication, node authentication, auditing, and non-production (demos, tests) configurations.</p>
+<p>For links to information on server resource planning see the <a href="../requirements/">requirements</a> page.</p>
+<h2 id="hardening">Hardening</h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Server and network hardening and production best practices are out of scope. This document only attempts to capture aspects relevant to the Client Registry.</p>
+</div>
+<h3 id="general-server-network-and-service-hardening">General Server, Network, and Service Hardening</h3>
+<p>Hardening and production best practices include:</p>
+<ul>
+<li>Removing unnecessary services, software, network protocols</li>
+<li>Backup and recovery</li>
+<li>Patches</li>
+<li>Vulnerability scanning</li>
+<li>Limiting remote administration</li>
+<li>Managing open internal and external ports</li>
+<li>Auditing, logging software</li>
+</ul>
+<p>See, for example, the <a href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-123.pdf">Guide to General Server Security: Recommendations of the National Institute of Standards and Technology</a> by Karen Scarfone, Wayne Jansen, Miles Tracy, July 2008, (NIST Special Publication 800-123).</p>
+<h3 id="nhcr-platform-hardening">NHCR Platform Hardening</h3>
+<p>In addition to the above general hardening practices that should be followed, some additional areas are important for the Client Registry.</p>
+<ul>
+<li>The <strong>NHCR UI</strong> should only be available on a local subnet, and further restricted with user and node authentication so that it is not exposed on the WAN.</li>
+<li><strong>Close external ports</strong>: Ports for Client Registry services should be locked down to localhost. The only external port required is for TLS with point-of-service systems that make queries to the Client Registry Service. This includes ES and HAPI FHIR. Those services can serve localhost only and effectively. </li>
+<li><strong>TLS for cluster (interservice) communication</strong>: Where Postgres and ES must communicate with other nodes TLS can be configured for ES for internode communication and Postgres for replication.</li>
+<li><strong>Disable HAPI Web Testing</strong>: The HAPI FHIR Server Web Testing UI should be disabled. This tool allows the viewing of demographic records on the server. It is not a tool suitable for production, or if it is used, then it is restricted to a local subnet and further restricted with user and node authentication.</li>
+<li><strong>Double-check for default passwords</strong>: Ensure no default passwords are in use for OpenHIM core and console, HAPI FHIR Server, ES, Postgres, and other services.</li>
+</ul>
+<h2 id="authentication-authorization-and-auditing">Authentication, Authorization, and Auditing</h2>
+<h3 id="user-authentication">User Authentication</h3>
+<ul>
+<li>Point-of-service systems should possess an appropriate identity provider solution built-in or externally. This also means following best practices for user authentication. </li>
+<li>The Client Registry Service and admin interface are the only direct access to demographic data systems that should require user authentication. As this Client Registry is meant for further customization during deployment, JWT and other user authentication solutions are not provided out-of-the-box but can be added.</li>
+<li>It is intended to support user-requested user authentication solutions as use cases are further identified.</li>
+</ul>
+<h3 id="node-authentication">Node Authentication</h3>
+<ul>
+<li>NHCR follows best practices outlined in the <a href="https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_TF_Vol2a.pdf">ITI-19 standard</a> for node authentication. </li>
+<li>Only secure nodes -- one with the ability to authenticate itself to other nodes and transmit data securely -- should be allowed to communicate with the Client Registry.</li>
+<li>Systems administrators should ensure that all clients must be registered and certificates assigned to them. In production, NHCR may act as an OpenHIM mediator which provides an extra layer of security. Clients may be registered in OpenHIM.</li>
+</ul>
+<h3 id="audit-events">Audit Events</h3>
+<ul>
+<li>All transactions (including queries) are stored in audit events. These events are stored in the HAPI FHIR Server and viewable in the NHCR UI. </li>
+<li>Being able to view audit events helps administrators run the system and tune queries,</li>
+<li>But, audit events must also be secured as they contain all information about queries. This means locking down the NHCR by subnet, node, and user authentication.</li>
+</ul>
+<h2 id="atna-logging">ATNA Logging</h2>
+<p>OpenHIM supports the Audit Trail and Node Authentication (ATNA) Integration Profile, which establishes a standard for responsibly storing audit events. It is highly recommended that the OpenHIM be configured as such but only after it is ensured that all default passwords have been changed and the OpenHIM is operating on a local subnet and thus not exposed externally. See the above hardening notes.</p>
+<p>See the <a href="https://openhim.readthedocs.io/en/latest/user-guide/auditing.html">OpenHIM user guide</a> for information on ATNA configuration.</p>
+<h2 id="non-production">Non-Production</h2>
+<p>In non-production settings only may self-signed certificates be created for testing and demonstrations. An example is as follows:</p>
+<div class="codehilite"><pre><span></span>openssl req -newkey rsa:4096 -keyout dhis2_key.pem -out dhis2_csr.pem -nodes -days <span class="m">365</span> -subj <span class="s2">&quot;/CN=dhis2&quot;</span>
+openssl x509 -req -in dhis2_csr.pem -CA ../certificates/server_cert.pem -CAkey ../certificates/server_key.pem -out dhis2_cert.pem -set_serial <span class="m">01</span> -days <span class="m">36500</span>
+openssl pkcs12 -export -in dhis2_cert.pem -inkey dhis2_key.pem -out dhis2.p12
+</pre></div>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../backup/" class="btn btn-neutral float-right" title="Backup and Recovery">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../notebooks/load_bulk_data_in_python.ipynb" class="btn btn-neutral" title="None"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2022 MoH</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../notebooks/load_bulk_data_in_python.ipynb" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../backup/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

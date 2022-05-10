@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="IntraHealth">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Local Installation - NHCR (Uganda) Documentation</title>
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Local Installation";
+    var mkdocs_page_input_path = "admin/installation.md";
+    var mkdocs_page_url = "/planetsystems/OpenCR/admin/installation/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> NHCR (Uganda) Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Home</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../..">Welcome!</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../user/introduction/">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/process/">Matching Process</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/recordlinkage/">Record Linkage Process</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/usecases/">Use Cases</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/ui/">UI -- Basics</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/ui-advanced/">UI -- Human Adjudication</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/openmrs/">OpenMRS MPI Client</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/cruid/">Unique Identifiers</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/algos/">Intro to Algorithms</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/supported/">Supported Algorithms</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Implementer</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../user/guide/">OpenHIE Implementation Guide</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../impl/roles/">Roles and Responsibilities</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/resources/">Additional Resources</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Developer</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../dev/addalgos/">Add Algorithms</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dev/docs/">Building Documentation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dev/license/">License</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dev/contributing/">Contributing</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Sysadmin</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <span class="caption-text">Introduction</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../architecture/">Architecture</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../proficiencies/">Proficiencies</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../internals/">Internals</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Getting Started (Docker)</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../docker/">Local Installation using Docker</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../queries/">Example API Query (cURL)</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../notebooks/basic_query_in_python.ipynb">None</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../decision_rules/">Decision Rules</a>
+                </li>
+    </ul>
+                </li>
+                <li class=" current">
+                    
+    <span class="caption-text">Installation</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../requirements/">System Requirements</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../method/">Choosing a Method</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../configuration/">Configuration</a>
+                </li>
+                <li class="toctree-l3 current">
+                    
+    <a class="current" href="./">Local Installation</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#local-installation">Local Installation</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#prerequisites">Prerequisites</a></li>
+        
+            <li><a class="toctree-l5" href="#hapi-fhir-server-cli">HAPI FHIR Server CLI</a></li>
+        
+            <li><a class="toctree-l5" href="#elasticsearch">ElasticSearch</a></li>
+        
+            <li><a class="toctree-l5" href="#nhcr-service-and-ui">NHCR Service and UI</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../installation_full/">Server Installation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../ansible/">Ansible</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Load Bulk Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../loadjs/">Load Demo Data (JavaScript)</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../notebooks/load_bulk_data_in_python.ipynb">None</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Production Considerations</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../security/">Security</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../backup/">Backup and Recovery</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../troubleshooting/">Troubleshooting</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">NHCR (Uganda) Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Installation &raquo;</li>
+        
+      
+        
+          <li>Sysadmin &raquo;</li>
+        
+      
+    
+    <li>Local Installation</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/planetsystems/OpenCR/edit/master/docs/admin/installation.md"> Edit on ministryofhealth/nhcr</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="local-installation">Local Installation</h1>
+<div class="admonition note">
+<p class="admonition-title">Time to complete</p>
+<p>60 Minutes</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This guide is for demonstrations or tests only, not for production environments.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This installation method requires familiarity with the command line.</p>
+</div>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>CPU/RAM: Modern CPUs with 8GB RAM.</li>
+<li>Java version 8 (1.8). Oracle-licensed Java (requires sign-in) and <a href="https://adoptopenjdk.net">AdoptOpenJDK</a> (not sign-in required) have been tested.</li>
+<li><a href="https://nodejs.org/en/download/package-manager">Node 10</a> which includes npm.</li>
+<li><a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">git</a></li>
+</ul>
+<h2 id="hapi-fhir-server-cli">HAPI FHIR Server CLI</h2>
+<p>For non-production environments, the HAPI maintainers provide a simple CLI-based tool to run it.</p>
+<p>The only required dependency is Java &gt;= 8 (1.8).</p>
+<p>See <a href="https://smilecdr.com/hapi-fhir/docs/tools/hapi_fhir_cli.html">HAPI FHIR CLI</a> for instructions for the OS of choice.</p>
+<p>The Client Registry requires FHIR version R4 and HAPI must be started for this version. To run HAPI:</p>
+<div class="codehilite"><pre><span></span>hapi-fhir-cli run-server -v r4
+</pre></div>
+
+
+<p>The HAPI Web Testing UI is available at <a href="http://localhost:8080/">http://localhost:8080/</a> The Web Testing UI should be disabled for production. It allows the viewing of any resource on the server.</p>
+<p>The FHIR Base URL is at <a href="http://localhost:8080/baseR4/">http://localhost:8080/baseR4/</a></p>
+<p>Visit <a href="http://localhost:8080/">http://localhost:8080/</a> to ensure HAPI is up and running or</p>
+<div class="codehilite"><pre><span></span>curl -X GET <span class="s2">&quot;localhost:8080/baseR4/Patient?&quot;</span>
+</pre></div>
+
+
+<h2 id="elasticsearch">ElasticSearch</h2>
+<p>Install and start ES for the intended OS. See the <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html">ES install instructions</a></p>
+<p>The required version is &gt;=7.6.</p>
+<p>The phonetic analysis package must be installed. For example:</p>
+<div class="codehilite"><pre><span></span>/usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-phonetic
+</pre></div>
+
+
+<p>The string similarity plugin must be installed. See: https://github.com/intrahealth/similarity-scoring</p>
+<p>Once installed and started, ensure that ES is up and running:</p>
+<div class="codehilite"><pre><span></span>curl -X GET <span class="s2">&quot;localhost:9200/_cat/health?v&amp;pretty&quot;</span>
+</pre></div>
+
+
+<p>Status should be yellow for a single-node cluster.</p>
+<h2 id="nhcr-service-and-ui">NHCR Service and UI</h2>
+<p>Clone the repository into a directory of choice.</p>
+<div class="codehilite"><pre><span></span>git clone https://github.com/intrahealth/client-registry.git
+</pre></div>
+
+
+<p>Enter the server directory, install node packages.</p>
+<div class="codehilite"><pre><span></span>cd client-registry/server
+npm install
+</pre></div>
+
+
+<p>Copy and edit the configuration file to your liking.</p>
+<div class="codehilite"><pre><span></span>cp config/config_development_template.json config/config_development.json
+# edit the servers...
+</pre></div>
+
+
+<p>The minimum changes to start a running standalone system are:</p>
+<ul>
+<li>Change <code>fhirServer.baseURL</code> to "http://localhost:8080/baseR4/"</li>
+</ul>
+<p>Run the server from inside client-registry/server:</p>
+<div class="codehilite"><pre><span></span># from client-registry/server
+sudo NODE_ENV=development node lib/app.js
+</pre></div>
+
+
+<ul>
+<li>Visit the UI at: <a href="https://localhost:3000/crux">https://localhost:3000/crux</a><ul>
+<li><strong>Default username</strong>: root@intrahealth.org </li>
+<li><strong>Default password</strong>: intrahealth</li>
+</ul>
+</li>
+</ul>
+<p>NHCR may require access to /var/log for logging. This requirement may be changed in the future.</p>
+<p>Congratulations! Now it's time to run a <a href="../queries/">query</a>.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../installation_full/" class="btn btn-neutral float-right" title="Server Installation">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../configuration/" class="btn btn-neutral" title="Configuration"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2022 MoH</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../configuration/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../installation_full/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

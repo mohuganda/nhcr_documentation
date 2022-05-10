@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="IntraHealth">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>UI -- Human Adjudication - NHCR (Uganda) Documentation</title>
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "UI -- Human Adjudication";
+    var mkdocs_page_input_path = "user/ui-advanced.md";
+    var mkdocs_page_url = "/planetsystems/OpenCR/user/ui-advanced/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> NHCR (Uganda) Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Home</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../..">Welcome!</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../introduction/">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../process/">Matching Process</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../recordlinkage/">Record Linkage Process</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../usecases/">Use Cases</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../ui/">UI -- Basics</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">UI -- Human Adjudication</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#ui-human-adjudication">UI -- Human Adjudication</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#action-required-tab">Action Required Tab</a></li>
+        
+            <li><a class="toctree-l4" href="#understanding-the-actions-tab">Understanding the Actions Tab</a></li>
+        
+            <li><a class="toctree-l4" href="#adjudication">Adjudication</a></li>
+        
+            <li><a class="toctree-l4" href="#review-changes-or-removing-flags">Review Changes or Removing Flags</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../openmrs/">OpenMRS MPI Client</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../cruid/">Unique Identifiers</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../algos/">Intro to Algorithms</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../supported/">Supported Algorithms</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Implementer</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../guide/">OpenHIE Implementation Guide</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../impl/roles/">Roles and Responsibilities</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../resources/">Additional Resources</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Developer</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../dev/addalgos/">Add Algorithms</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dev/docs/">Building Documentation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dev/license/">License</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dev/contributing/">Contributing</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Sysadmin</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <span class="caption-text">Introduction</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/architecture/">Architecture</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/proficiencies/">Proficiencies</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/internals/">Internals</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Getting Started (Docker)</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/docker/">Local Installation using Docker</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/queries/">Example API Query (cURL)</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../notebooks/basic_query_in_python.ipynb">None</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/decision_rules/">Decision Rules</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Installation</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/requirements/">System Requirements</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/method/">Choosing a Method</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/configuration/">Configuration</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/installation/">Local Installation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/installation_full/">Server Installation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/ansible/">Ansible</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Load Bulk Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/loadjs/">Load Demo Data (JavaScript)</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../notebooks/load_bulk_data_in_python.ipynb">None</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Production Considerations</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/security/">Security</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/backup/">Backup and Recovery</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/troubleshooting/">Troubleshooting</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">NHCR (Uganda) Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>User &raquo;</li>
+        
+      
+    
+    <li>UI -- Human Adjudication</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/planetsystems/OpenCR/edit/master/docs/user/ui-advanced.md"> Edit on ministryofhealth/nhcr</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="ui-human-adjudication">UI -- Human Adjudication</h1>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>You may not have access to the UI, and that's a good thing. The UI allows users to be able to view any break any match, which includes viewing demographic data from submitting systems. It should be secure and only authorized users must be able to access it.</p>
+</div>
+<p>The NHCR User Interface has advanced features for human adjudication to conduct curate matches and create new ones. This is more advanced than simply breaking and reverting matches.</p>
+<h2 id="action-required-tab">Action Required Tab</h2>
+<p>The home page has an action required tab. On this tab are a list of the flagged records. They may have one of two potential areas of human adjudication.</p>
+<ol>
+<li><strong>Potential matches</strong>: These are matches which passed a minimum threshhold but another match was higher.</li>
+<li><strong>Conflicts on match</strong>: These matches passed a high threshhold and are very close to the chosen match.</li>
+<li><strong>Remove the flag</strong>: This is to remove the action required flag and no action will be taken.</li>
+</ol>
+<p><img alt="" src="../../images/actionrequired.png" /></p>
+<p>In a column on the right are the reasons for action being required.</p>
+<p>Clicking on a record gives you only one set of actions for that record and its related record. Once that record is resolved in some way, through actions 1-3 above, then the next set of records will be loaded. Another way to get to a specific record is to search for it from the main actions required tab.</p>
+<h2 id="understanding-the-actions-tab">Understanding the Actions Tab</h2>
+<p>The actions page for the set of records shows large dark blue banners under which are each unique linked record in the set. The CRID (unique identifer in NHCR) assigned is displayed along with more information.</p>
+<p><img alt="" src="../../images/adjudicate.png" /></p>
+<h3 id="options-menu">Options Menu</h3>
+<p>There is an options menu to the right side. This has several faetures.</p>
+<p><img alt="" src="../../images/adjudicate_options.png" /></p>
+<p><strong>Save changes</strong>: After making all changes, the user must review and accept them. This feature can also be used to remove the flag and move to the next set of records.</p>
+<p><img alt="" src="../../images/adjudicate_review.png" /></p>
+<p><strong>Simplified naming</strong>: The simplified naming option is meant to make the records easier to reference. It uses the names of the elements in the periodic table. The names are only shortcuts to refer to the records instead of the identifiers. On another page the simplified names will be reused, so they are not unique between pages of records, only for each action page for groups of records. This feature can be turned off. The names do not in any reflect matching.</p>
+<p><img alt="" src="../../images/adjudicate_simplifiedoff.png" /></p>
+<p><strong>Show scores matrix</strong>: This shows a 2D matrix of all records against one another to show what the overall decision rules scores were that were the result of matching. When this is selected, a table pops up at the bottom of the page showing the matrix.</p>
+<p><img alt="" src="../../images/adjudicate_scoresmatrix.png" /></p>
+<p><strong>Include actual CRID with temporary ID</strong>: This toggles showing full IDs for the record.</p>
+<p><img alt="" src="../../images/adjudicate_fullid.png" /></p>
+<h3 id="views">Views</h3>
+<p><strong>Full view</strong>: On each subrecord under the CRID record there is a full view toggle. At the bottom of the page a popup card will show the full record information. This may be helpful in comparing records. If multiple toggles are flipped, then those records will all be revealed.</p>
+<p><img alt="" src="../../images/adjudicate_fullview.png" /></p>
+<h2 id="adjudication">Adjudication</h2>
+<p>After review, in order to move records around into another CRID there is a dropdown menu. This makes it easy to select which records to move. If the record does not exist, then a new CRID can be created.</p>
+<p><img alt="" src="../../images/adjudicate_moveassign.png" /></p>
+<p>On selecting an action, there is a confirmation box. Note that the changes are not yet pushed.</p>
+<p><img alt="" src="../../images/adjudicate_confirm.png" /></p>
+<h2 id="review-changes-or-removing-flags">Review Changes or Removing Flags</h2>
+<p>After making changes to records, the user must review and accept them.</p>
+<p><img alt="" src="../../images/adjudicate_review.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The user must choose to save changes in the option menu for changes to be made.</p>
+</div>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../openmrs/" class="btn btn-neutral float-right" title="OpenMRS MPI Client">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../ui/" class="btn btn-neutral" title="UI -- Basics"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2022 MoH</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../ui/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../openmrs/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

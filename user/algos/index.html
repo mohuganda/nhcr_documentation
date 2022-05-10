@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="IntraHealth">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Intro to Algorithms - NHCR (Uganda) Documentation</title>
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Intro to Algorithms";
+    var mkdocs_page_input_path = "user/algos.md";
+    var mkdocs_page_url = "/planetsystems/OpenCR/user/algos/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> NHCR (Uganda) Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Home</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../..">Welcome!</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../introduction/">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../process/">Matching Process</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../recordlinkage/">Record Linkage Process</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../usecases/">Use Cases</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../ui/">UI -- Basics</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../ui-advanced/">UI -- Human Adjudication</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../openmrs/">OpenMRS MPI Client</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../cruid/">Unique Identifiers</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Intro to Algorithms</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#intro-to-algorithms">Intro to Algorithms</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#approaches">Approaches</a></li>
+        
+            <li><a class="toctree-l4" href="#types-of-deterministic-matching">Types of Deterministic Matching</a></li>
+        
+            <li><a class="toctree-l4" href="#types-of-fuzzy-matching">Types of Fuzzy Matching</a></li>
+        
+            <li><a class="toctree-l4" href="#types-of-probabilistic-matching">Types of Probabilistic Matching</a></li>
+        
+            <li><a class="toctree-l4" href="#speed">Speed</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../supported/">Supported Algorithms</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Implementer</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../guide/">OpenHIE Implementation Guide</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../impl/roles/">Roles and Responsibilities</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../resources/">Additional Resources</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Developer</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../dev/addalgos/">Add Algorithms</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dev/docs/">Building Documentation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dev/license/">License</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dev/contributing/">Contributing</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Sysadmin</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <span class="caption-text">Introduction</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/architecture/">Architecture</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/proficiencies/">Proficiencies</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/internals/">Internals</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Getting Started (Docker)</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/docker/">Local Installation using Docker</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/queries/">Example API Query (cURL)</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../notebooks/basic_query_in_python.ipynb">None</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/decision_rules/">Decision Rules</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Installation</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/requirements/">System Requirements</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/method/">Choosing a Method</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/configuration/">Configuration</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/installation/">Local Installation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/installation_full/">Server Installation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/ansible/">Ansible</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Load Bulk Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/loadjs/">Load Demo Data (JavaScript)</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../notebooks/load_bulk_data_in_python.ipynb">None</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Production Considerations</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/security/">Security</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/backup/">Backup and Recovery</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../admin/troubleshooting/">Troubleshooting</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">NHCR (Uganda) Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>User &raquo;</li>
+        
+      
+    
+    <li>Intro to Algorithms</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/planetsystems/OpenCR/edit/master/docs/user/algos.md"> Edit on ministryofhealth/nhcr</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="intro-to-algorithms">Intro to Algorithms</h1>
+<p>Algorithms can be deterministic, fuzzy, probabilistic, or a combination of approaches; most include some element of automatic matching plus human review. No perfect algorithm currently exists <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. Typically, the creator(s) of the client registry will agree on the appropriate threshold to determine a "match" and this may need to be recalibrated over time.</p>
+<h2 id="approaches">Approaches</h2>
+<p>Types of matching approaches:</p>
+<ul>
+<li>
+<p><strong>Deterministic</strong>. This can be thought of enforcing exact matches. This type of matching performs poorly when the quality of the data is low and/or the discriminatory power of the variable used for matching is low (e.g. sex is a poor discriminatory variable). If exact matching is enforced, the data scientist should verify that other fields also match using a combination of approaches, as needed.</p>
+</li>
+<li>
+<p><strong>Fuzzy</strong>. The fuzzy match method relies on converting items to their core components (e.g. phonetics) to determine matching rather than relying on probabilities. This method’s strength is addressing typing errors but remains imperfect in cases where words are similar, but are not the same (e.g. there, their). Its efficacy is unproven in most languages other than English.</p>
+</li>
+<li>
+<p><strong>Probabilistic</strong>. This is a method that assigns a match probability to a pair of records. The most common method (Fellegi-Sunter) checks a number of fields and sums up the probabilities that each field is a match. Higher scores indicate a match. Recent research has been directed at improving the FS method <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>.</p>
+</li>
+</ul>
+<p>Matching algorithms are evaluated based on their sensitivity and specificity in detecting matches. One caveat to remember is to check whether the sensitivity and specificity reported are with or without human review. Generally, it is better to minimize the chances of a false positive; however, as false positives go towards zero false negatives increase and the balance must be maintained.</p>
+<h2 id="types-of-deterministic-matching">Types of Deterministic Matching</h2>
+<ul>
+<li><strong>Field-based (exact) matching</strong>. Typically fields are compared to each other across data sets and a result is a match or non-match, thus deterministic.</li>
+</ul>
+<h2 id="types-of-fuzzy-matching">Types of Fuzzy Matching</h2>
+<p>Methods that assist in matching based on phonetic transformations to remedy spelling errors:</p>
+<ul>
+<li><strong>Soundex</strong> indexes names by sound as pronounced in English. The Soundex encoding includes the first letter of a surname followed by 3 digits. This method relies on correctly recording the first letter of a name.</li>
+<li><strong>Metaphone</strong> indexes words by their English pronunciation.</li>
+<li><strong>Double Metaphone</strong> implements Metaphone but allows for two encodings to be returned for a word rather than constraining it to one choice. It works well with names of various origins, but the lettering must be English.</li>
+<li><strong>Metaphone 3</strong> is the next generation of Double Metaphone and is a commercial product. </li>
+</ul>
+<p>Methods that compare string similarity:</p>
+<ul>
+<li><strong>Levenshtein edit distance</strong> is a measure of the number of edits (insertions and deletions) that would be required to change one string to another.</li>
+<li><strong>Jaro-Winkler</strong> comparator/distance is similar to Levenshtein, but it gives more weight to strings that match on the beginning of the string. 0 is an exact match. Lower scores are better than higher scores. If the beginning of the string is misspelled, this will not work as well.</li>
+<li><strong>Longest common subsequence</strong> matches subsequences within strings. Subsequences do not need to match positions.</li>
+</ul>
+<h2 id="types-of-probabilistic-matching">Types of Probabilistic Matching</h2>
+<p>The most widely used probabilistic matching method is the <strong>Fellegi-Sunter method</strong> <sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>. In this method, each field is weighted by its discriminatory power and data quality; could be manually or via model training <sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>. The algorithm checks each field and decides whether the field matches between the pairs or not. If the fields match, the weight is added to the final score. If the fields do not match, the weight is subtracted from the final score. If the sum of the weights is above a threshold, they are considered a match. Possible matches can also be produced and these would require human review.</p>
+<p>One drawback is that this method assumes that no fields are correlated with each other or that they are not conditionally dependent. The assumption of conditional independence does not always hold and can lead to suboptimal results which is the biggest limitation of this method <sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup>. For example, there are more women named Barbara than men named Barbara. First name and sex are not independent. </p>
+<p>Extensions to the F-S method include: </p>
+<ul>
+<li>The <strong>approximate comparator extension</strong> (ACE) <sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup> which includes string matching strategies prior to performing the weighting and scoring.</li>
+</ul>
+<p>Alternatives to F-S include (see <a href="https://www.youtube.com/watch?v=5zY8FfAIyOg">video</a>):</p>
+<ul>
+<li><strong>GHC Scaling Algorithm</strong> <sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup> is an order of magnitude faster than F-S. Calculates underlying weights and doesn’t rely on independence assumption.</li>
+</ul>
+<h2 id="speed">Speed</h2>
+<p>Methods to reduce the number of comparisons and speed up the process:</p>
+<ul>
+<li><strong>Blocking</strong>. This is like sorting socks by color before trying to match them. It speeds up the process by reducing the number of pairs that need to be checked.</li>
+</ul>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>McFarlane, T. D., Dixon, B. E., &amp; Grannis, S. J. (2016). Client registries: identifying and linking patients. In Health Information Exchange (pp. 163-182). Academic Press.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Li, X., Xu, H., Shen, C., &amp; Grannis, S. (2018). Automated linkage of patient records from disparate sources. Statistical methods in medical research, 27(1), 172-184. DuVall, Scott L., Richard A. Kerber, and Alun Thomas. "Extending the Fellegi–Sunter probabilistic record linkage method for approximate field comparators." Journal of biomedical informatics 43.1 (2010): 24-30.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>McFarlane, T. D., Dixon, B. E., &amp; Grannis, S. J. (2016). Client registries: identifying and linking patients. In Health Information Exchange (pp. 163-182). Academic Press.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>DuVall, Scott L., Richard A. Kerber, and Alun Thomas. "Extending the Fellegi–Sunter probabilistic record linkage method for approximate field comparators." Journal of biomedical informatics 43.1 (2010): 24-30.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>Li, X., Xu, H., Shen, C., &amp; Grannis, S. (2018). Automated linkage of patient records from disparate sources. Statistical methods in medical research, 27(1), 172-184.&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p>DuVall, Scott L., Richard A. Kerber, and Alun Thomas. "Extending the Fellegi–Sunter probabilistic record linkage method for approximate field comparators." Journal of biomedical informatics 43.1 (2010): 24-30.&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:7">
+<p>Goldstein, H., Harron, K., &amp; Cortina‐Borja, M. (2017). A scaling approach to record linkage. Statistics in medicine, 36(16), 2514-2521.&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../supported/" class="btn btn-neutral float-right" title="Supported Algorithms">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../cruid/" class="btn btn-neutral" title="Unique Identifiers"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2022 MoH</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../cruid/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../supported/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

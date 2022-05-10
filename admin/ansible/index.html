@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="IntraHealth">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Ansible - NHCR (Uganda) Documentation</title>
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Ansible";
+    var mkdocs_page_input_path = "admin/ansible.md";
+    var mkdocs_page_url = "/planetsystems/OpenCR/admin/ansible/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> NHCR (Uganda) Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Home</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../..">Welcome!</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../user/introduction/">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/process/">Matching Process</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/recordlinkage/">Record Linkage Process</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/usecases/">Use Cases</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/ui/">UI -- Basics</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/ui-advanced/">UI -- Human Adjudication</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/openmrs/">OpenMRS MPI Client</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/cruid/">Unique Identifiers</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/algos/">Intro to Algorithms</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/supported/">Supported Algorithms</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Implementer</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../user/guide/">OpenHIE Implementation Guide</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../impl/roles/">Roles and Responsibilities</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user/resources/">Additional Resources</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Developer</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../dev/addalgos/">Add Algorithms</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dev/docs/">Building Documentation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dev/license/">License</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../dev/contributing/">Contributing</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Sysadmin</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <span class="caption-text">Introduction</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../architecture/">Architecture</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../proficiencies/">Proficiencies</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../internals/">Internals</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Getting Started (Docker)</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../docker/">Local Installation using Docker</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../queries/">Example API Query (cURL)</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../notebooks/basic_query_in_python.ipynb">None</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../decision_rules/">Decision Rules</a>
+                </li>
+    </ul>
+                </li>
+                <li class=" current">
+                    
+    <span class="caption-text">Installation</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../requirements/">System Requirements</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../method/">Choosing a Method</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../configuration/">Configuration</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../installation/">Local Installation</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../installation_full/">Server Installation</a>
+                </li>
+                <li class="toctree-l3 current">
+                    
+    <a class="current" href="./">Ansible</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#ansible">Ansible</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#preparation">Preparation</a></li>
+        
+            <li><a class="toctree-l5" href="#specify-hosts">Specify hosts</a></li>
+        
+            <li><a class="toctree-l5" href="#opencr-user-optional">opencr user (optional)</a></li>
+        
+            <li><a class="toctree-l5" href="#installation">Installation</a></li>
+        
+            <li><a class="toctree-l5" href="#add-additional-user-public-keys">Add additional user public keys</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Load Bulk Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../loadjs/">Load Demo Data (JavaScript)</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../notebooks/load_bulk_data_in_python.ipynb">None</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Production Considerations</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../security/">Security</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../backup/">Backup and Recovery</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../troubleshooting/">Troubleshooting</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">NHCR (Uganda) Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Installation &raquo;</li>
+        
+      
+        
+          <li>Sysadmin &raquo;</li>
+        
+      
+    
+    <li>Ansible</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/planetsystems/OpenCR/edit/master/docs/admin/ansible.md"> Edit on ministryofhealth/nhcr</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="ansible">Ansible</h1>
+<p>This documents how to use Ansible playbooks to set up a production-like server installation. It differs from a production installation in that certificates must not be self-signed in a production environment.</p>
+<blockquote>
+<p>These steps are for installing on a server OS directly and require experience with remote configuration and Linux administration.</p>
+</blockquote>
+<h2 id="preparation">Preparation</h2>
+<p>You must have a local VM or remote server. See <code>/packaging/vagrant/centos</code> for a Vagrant VM (CentOS 7) script for working example of creating a local VM.</p>
+<p>Clone the main repository. The Ansible playbooks and templates are in that folder.</p>
+<div class="codehilite"><pre><span></span>git clone git@github.com:planetsystems/OpenCR.git
+cd client-registry/packaging/ansible
+</pre></div>
+
+
+<h3 id="ssh">SSH</h3>
+<p>Create a VM. Make sure to include a public ssh key for the user who will install prerequisites. Your SSH public key should be in <code>.ssh/authorized_keys</code> on the remote host, ie:</p>
+<div class="codehilite"><pre><span></span>cat ~/.ssh/id_rsa.pub <span class="p">|</span> ssh user@remotehost <span class="s1">&#39;cat &gt;&gt; .ssh/authorized_keys&#39;</span>
+</pre></div>
+
+
+<h2 id="specify-hosts">Specify hosts</h2>
+<p>Hosts can be specified in inventory files or on the command line. To use Ansible with an inventory file, you must create a file or edit the one in the repository. There are yaml and ini formats supported.</p>
+<p>A <code>hosts</code> file that has an entry for one server would be:</p>
+<div class="codehilite"><pre><span></span><span class="k">[servers]</span>
+<span class="na">172.16.174.137</span>
+</pre></div>
+
+
+<blockquote>
+<p>Note that <code>[servers]</code> is not necessary, it is way to tag groups of servers. The file may simply contain an IP address or domain.</p>
+</blockquote>
+<p>To use the hosts file:</p>
+<div class="codehilite"><pre><span></span>ansible-playbook -i hosts someplaybook.yaml
+</pre></div>
+
+
+<p>Alternately, hosts may be specified on the command line (the comma is necessary even if there is only one host):</p>
+<div class="codehilite"><pre><span></span>ansible-playbook -i 172.16.168.158, someplaybook.yaml
+</pre></div>
+
+
+<h2 id="opencr-user-optional">opencr user (optional)</h2>
+<p>A example playbook is provided to show how to create a <code>opencr</code> user with sudo permissions using Ansible to be used with the host. </p>
+<p>Create the <code>opencr</code> user and gives it sudo access:</p>
+<div class="codehilite"><pre><span></span>ansible-playbook -i hosts user.yaml
+</pre></div>
+
+
+<h2 id="installation">Installation</h2>
+<div class="codehilite"><pre><span></span>ansible-playbook -i hosts prep_centos.yaml -e <span class="nv">user</span><span class="o">=</span>opencr
+ansible-playbook -i hosts elasticsearch.yaml -e <span class="nv">user</span><span class="o">=</span>opencr
+ansible-playbook -i hosts tomcat.yaml -e <span class="nv">user</span><span class="o">=</span>opencr
+ansible-playbook -i hosts postgres.yaml -e <span class="nv">user</span><span class="o">=</span>opencr -e <span class="nv">pgpass</span><span class="o">=</span>hapi
+ansible-playbook -i hosts hapi.yaml -e <span class="nv">user</span><span class="o">=</span>opencr
+ansible-playbook -i hosts opencr.yaml -e <span class="nv">user</span><span class="o">=</span>opencr
+</pre></div>
+
+
+<p>An optional step but recommeded is to check the logs for services running after installation:</p>
+<div class="codehilite"><pre><span></span>ansible-playbook -i hosts troubleshoot.yaml -e user=opencr
+</pre></div>
+
+
+<p>OpenCR is now running. It will only allow requests from localhost (from the same server it is installed on).</p>
+<p>Visit: https://ipaddress:3000/crux</p>
+<p>HTTPS must be used.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If not running localhost, follow the next steps to create self-signed server and client certs, and copy them onto the server using an Ansible script below.</p>
+</div>
+<h3 id="certificates-required-if-not-using-localhost">Certificates (Required if not using localhost)</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These steps are automated in the certs.sh script, but please read through the steps to understand what is happening.
+To use:
+<code>bash certs.sh &lt;ip address or domain&gt;</code>
+Then run the ansible script to replace it on the server:
+<code>ansible-playbook -i hosts servercerts.yaml -e user=opencr</code></p>
+</div>
+<p>Two certificate pairs are required, one pair for the server and one for the client generated from the server's. The existing self-signed server certs use localhost as the CN. This can be seen with the following for any cert:</p>
+<div class="codehilite"><pre><span></span>$ openssl x509 -in ../../server/certificates/server_cert.pem -text
+...
+        Subject: <span class="nv">CN</span> <span class="o">=</span> localhost, <span class="nv">O</span> <span class="o">=</span> Client Registry
+...
+</pre></div>
+
+
+<p>This means that new server and client certificates need to be generated with the IP address or domain for clients to access the client registry if it is not running on localhost.</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Self-signed certificates must only be created for testing and demonstrations and in non-production settings.</p>
+</div>
+<p>Make a note of your IP or domain for which you need to create a server cert. Run the following to create a new server cert/key pair. It will ask for a pass phrase (which is required in production) but -nodes option squashes that. This will create two files, server_key.pem and server_cert.pem. We can inspect the certificate to verify it has the IP address in the subject.</p>
+<div class="codehilite"><pre><span></span># confirm ip being used
+cat hosts
+openssl req -x509 -newkey rsa:4096 -keyout server_key.pem -out server_cert.pem -days 365 -subj &quot;/CN=172.16.168.172&quot; -nodes
+# confirm new CN
+openssl x509 -in server_cert.pem -text
+</pre></div>
+
+
+<p>Now it is necessary to create new a new client cert based on the server cert. A key is first created, then the certificate, and they are packaged together in a p12 file.</p>
+<div class="codehilite"><pre><span></span>openssl req -newkey rsa:4096 -keyout ansible_key.pem -out ansible_csr.pem -nodes -subj <span class="s2">&quot;/CN=ansible&quot;</span>
+openssl x509 -req -in ansible_csr.pem -CA server_cert.pem -CAkey server_key.pem -out ansible_cert.pem -set_serial <span class="m">01</span> -days <span class="m">36500</span>
+<span class="c1"># requires specifying an export key</span>
+openssl pkcs12 -export -in ansible_cert.pem -inkey ansible_key.pem -out ansible.p12
+</pre></div>
+
+
+<p>The client certs can be placed in the existing folder for client certs for convenience.</p>
+<div class="codehilite"><pre><span></span><span class="c1"># add client certs</span>
+cp ansible_key.pem ../../server/sampleclientcertificates/
+cp ansible_csr.pem ../../server/sampleclientcertificates/
+cp ansible_cert.pem ../../server/sampleclientcertificates/
+cp ansible.p12 ../../server/sampleclientcertificates/
+</pre></div>
+
+
+<blockquote>
+<p>Server certs may also be copied into ../../certificates/ for convenience but this will overwrite the copies and break localhost if the repo is used to upload code to GitHub.</p>
+</blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>To complete the process, server certs need to be placed into the server. This will be done using an Ansible script below.</p>
+</div>
+<p>Copy the server certs to the server and restart opencr service to use them.</p>
+<div class="codehilite"><pre><span></span>ansible-playbook -i hosts servercerts.yaml -e user=opencr
+</pre></div>
+
+
+<p>Test (for servers not localhost):</p>
+<div class="codehilite"><pre><span></span># this assumes the server cert and client cert are in this (/packaging/ansible) directory
+# replace the path to your copy of the repo
+# replace the ip address of the server
+curl --cert ansible.p12 --cert-type p12 --cacert server_cert.pem -d @/Users/richard/src/github.com/intrahealth/client-registry/DemoData/patient1_openmrs.json -H &quot;Content-Type: application/json&quot; -XPOST https://172.16.168.172:3000/Patient
+</pre></div>
+
+
+<h2 id="add-additional-user-public-keys">Add additional user public keys</h2>
+<p>As necessary, add additional ssh keys to the user <code>opencr</code>. (Ensure that the user's public key is available on github, ie. https://github.com/citizenrich.keys):</p>
+<div class="codehilite"><pre><span></span>ansible-playbook -i hosts keys.yaml
+</pre></div>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../loadjs/" class="btn btn-neutral float-right" title="Load Demo Data (JavaScript)">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../installation_full/" class="btn btn-neutral" title="Server Installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2022 MoH</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../installation_full/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../loadjs/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>
