@@ -2,7 +2,7 @@
 
 Thank you for taking an interest in the National Health Client Registry (NHCR)! This is a ministry of health project.
 
-> Regardless if you're just curious, an implementer, or a developer, please read the documentation for an overview at https://intrahealth.github.io/client-registry/.
+> Regardless if you're just curious, an implementer, or a developer, please read the documentation for an overview at https://mohuganda.github.io/nhcr_documentation/.
 
 > The API documentation is at https://intrahealth.github.io/opencr-api
 
